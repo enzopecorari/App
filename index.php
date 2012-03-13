@@ -38,7 +38,6 @@
                 $("#result").html(res);
                 $("#result").addClass('resultado');
                 $("#result").removeClass('error');
-                jQuery.fn.highlight ("lalala", "resultado")
             });
         $("#alias").val('');
         $("#alias").focus();
