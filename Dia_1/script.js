@@ -3,9 +3,10 @@
  * and open the template in the editor.
  */
 
-window.onload = function(){ alert("Page loaded"); }
-    $('#alias').focus();
-    
+    $(document).ready(function() {
+    alert("Page loaded");
+    $("#alias").focus();
+    });
     
     $("#alias").keypress(function(event) {
     if (event.which == 13) {
