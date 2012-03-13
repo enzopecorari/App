@@ -1,0 +1,25 @@
+/* 
+    Document   : styles
+    Created on : 13-mar-2012, 10:31:52
+    Author     : Enzo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.resultado {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+body {
+    text-align:center;
+    
+}
+

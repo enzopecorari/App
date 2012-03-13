@@ -12,12 +12,15 @@
         google.load("jquery", "1.7.1");
       //]]>
     </script>
+
+  
     <br/><br/><br/><br/>
     <input type="text" value="" id="alias" />
     <input type="button" value="click!" id="button" />
-    <br/><br/><br/>
+    <br/><br/>
+
     <div id="result"></div>
-       
+  
     <script>
     window.onload = function(){ alert("Page loaded"); }
     $('#alias').focus();
@@ -37,7 +40,7 @@
             function(res) {
                 $("#result").html(res);
                 $("#result").addClass('resultado');
-                $("#result").removeClass('error');
+                $("#result").removeClass('error');      
             });
         $("#alias").val('');
         $("#alias").focus();
