@@ -6,20 +6,21 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-    display: block;
+body {
+    text-align:center;
+   
+}
+
+div {
+     padding-bottom: 6px;
 }
 
 .resultado {
     color: green;
+    padding-top: 24px;
 }
 
 .error {
     color: red;
+    padding-top: 24px;
 }
-
-body {
-    text-align:center;
-    
-}
-

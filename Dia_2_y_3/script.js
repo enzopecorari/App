@@ -13,26 +13,22 @@
         $("#btn").click();
     }
     });
-    $("#button").click(function(event) {
-        event.preventDefault();
+    $("#btn").click(function(event) {
         var param = $("#alias").val();
 
         $.post('api/dispatcher.php',
             {service: 'welcome.hello', params: {"name": ""+param+""}},
             function(res) {
-                var result = $("#result");
-                result.html(res);
-                result.addClass('resultado');
-                result.removeClass('error');  
+                var resul = $("#result");
+                resul.html(res);
+               // resul.addClass('resultado');
+              //  resul.removeClass('error');  
             });
         $("#alias").val('');
         $("#alias").focus();
     });
-    var result = $("#result");
-    result.ajaxError(function() {
-    result.addClass('error');
-    result.removeClass('resultado');
-    result.text("ERROR");  
-    });
-    $.mobile.pageLoading();
-   
+    $("#result").ajaxError(function(event, request, settings){
+        $(this).html("Error en " + settings.url + ": "+ request.responseText);
+        $(this).addClass('error');
+        $(this).removeClass('resultado'); 
+    }); 

@@ -2,15 +2,26 @@
 <html>
     <head>
         <title>App</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
     </head>
     <body>
-    <input type="text" value="" id="alias" />
-    <a data-role="button" id="button">click!</a>
-    <div id="result"></div>
-    <script src="script.js"></script>    
+    
+    <div data-role="page"> 
+        <div data-role="header">App</div> 
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <input type="text" id="alias" value=""  />
+            </div>	
+            <div>
+                <input id="btn" type="button" data-inline="true" value="Click!"/>
+            </div>
+            <div id="result">dbdbddbdf</div>
+        </div> 
+    </div>  
+    <script src="scripts.js"></script>   
     </body>
 </html>
