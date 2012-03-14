@@ -10,12 +10,21 @@ root {
     display: block;
 }
 
+div {
+     padding-bottom: 6px;
+     padding-top: 6px;
+}
+
 .resultado {
+    padding-top: 24px;
     color: green;
+    padding-bottom: 6px;
 }
 
 .error {
+    padding-top: 24px;
     color: red;
+    padding-bottom: 6px;
 }
 
 body {

@@ -20,15 +20,17 @@
         $.post('api/dispatcher.php',
             {service: 'welcome.hello', params: {"name": ""+param+""}},
             function(res) {
-                $("#result").html(res);
-                $("#result").addClass('resultado');
-                $("#result").removeClass('error');      
+                var result = $("#result");
+                result.html(res);
+                result.addClass('resultado');
+                result.removeClass('error');      
             });
         $("#alias").val('');
         $("#alias").focus();
     });
-    $("#result").ajaxError(function() {
-    $("#result").addClass('error');
-    $("#result").removeClass('resultado');
-    $("#result").text("ERROR");  
+    var result = $("#result");
+    result.ajaxError(function() {
+    result.addClass('error');
+    result.removeClass('resultado');
+    result.text("ERROR");  
     });
