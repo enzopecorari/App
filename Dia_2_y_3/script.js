@@ -21,8 +21,8 @@
             function(res) {
                 var resul = $("#result");
                 resul.html(res);
-               // resul.addClass('resultado');
-              //  resul.removeClass('error');  
+                resul.addClass('resultado');
+                resul.removeClass('error');  
             });
         $("#alias").val('');
         $("#alias").focus();
