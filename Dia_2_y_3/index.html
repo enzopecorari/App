@@ -21,7 +21,7 @@
             </div>
             <div id="result"></div>
             <p>View others</p>	
-            <p><a href="#one" data-transition="pop">go to one!</a></p>
+            <p><a href="#one" data-transition="pop">go to Movies!</a></p>
             <p><a href="#two" data-transition="slidedown">go to two!</a></p>	
             <p><a href="#three" data-transition="turn">go to three!</a></p>
             <p><a href="pages/sample1.php" data-transition="flip">go to page php!</a></p>
@@ -30,7 +30,7 @@
         <div data-role="footer">		
 	<div data-role="navbar">
 		<ul>
-			<li><a href="#one">One</a></li>
+			<li><a href="#one">Movies</a></li>
 			<li><a href="#two">Two</a></li>
 			<li><a href="#three">Three</a></li>
 		</ul>
@@ -47,7 +47,10 @@
             </div>
             <div data-role="content">	
                     <p>This is the first page!</p>		
-                    <p>Principal page:  <a href="#home">Home</a></p>	
+                    <p>Principal page:  <a href="#home">Home</a></p>
+                    <div id="list"><div><ul data-role='listview' data-theme='a' data-inset="true" data-split-theme="d" id='moviees'></ul></div></div>
+                     <script src="movieScript.js"></script> 
+                   
             </div><!-- /content -->
             <div data-role="footer">
                 <div data-role="navbar">
@@ -94,7 +97,7 @@
             </div>
             <div data-role="content">	
                     <p>This is the third page!</p>		
-                    <p>Principal page:  <a href="#home">Home</a></p>	
+                    <p>Principal page:  <a href="#home">Home</a></p>	                   
             </div><!-- /content -->
             <div data-role="footer">
                     <div data-role="navbar">
@@ -119,8 +122,17 @@
             </div><!-- /content -->
             
     </div><!-- /page -->
+    <script src="script.js"></script>      
     
-    <script src="script.js"></script>  
+    <!-- Dialog for movie information-->
+    <div data-role="page" data-rel="dialog" id="moviedialog" data-theme="e">
+            <div data-role="header" data-theme="a">
+                    <h1>Movie</h1>
+            </div><!-- /header -->
+            <div data-role="content" data-theme="a" id="moviedata"></div><!-- /content -->
+            
+    </div><!-- /page -->
+    <script src="script.js"></script> 
     
     </body>
 </html>

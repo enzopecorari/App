@@ -24,3 +24,10 @@ div {
     color: red;
     padding-top: 24px;
 }
+
+.titulo {
+    color: red;
+    padding-top: 24px;
+    font-style: italic;
+    font-size: 24px;
+}
