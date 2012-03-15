@@ -29,28 +29,33 @@
         $("#alias").focus();
         });
     
-    .$("#btnm").click(function(event) {
+    $("#btnm").click(function(event) {
         var param = null;        
-        $.post('api/dispatcher.php',
-        {service: 'movie.getTop', params: {"name": ""+param+""}},
-        function(resu) {               
-              var myObject = eval(resu);
-              var lista = "";
-              var i=0;
-              lista += "<div>";
-              while (myObject[i]!=null){
-                 lista += "<div class='titulo'>"+myObject[i].Name+"</div>"; 
-                 lista += "<div><img src='"+myObject[i].BoxArt.SmallUrl+"'/></div>";
-                 lista += "<div class='resultado'> Year:"+myObject[i].ReleaseYear+"</div>"; 
-                 lista += "<div>Synopsis: "+myObject[i].Synopsis+"</div>";
-                 ++i;
-              } //se puede poner un floated div al medio?              
-              lista += "</div>";
-              $("#standout").html(lista);
-              $("#the_lights").fadeTo(1,0);
-              document.getElementById("the_lights").style.display="block";
-              $("#the_lights").fadeTo("slow",0.6);
-        });
+        $.ajax({
+                    url: 'api/dispatcher.php',
+                    type: "POST",
+                    crossDomain: true,
+                    data: { service: 'movie.getTop',params: {'name': 'null'}},
+                    dataType: 'json',
+                    success: function(resu){
+                            var myObject = eval(resu);
+                            var lista = "";
+                            var i=0;
+                            lista += "<div>";
+                            while (myObject[i]!=null){
+                                lista += "<div class='titulo'>"+myObject[i].Name+"</div>"; 
+                                lista += "<div><img src='"+myObject[i].BoxArt.SmallUrl+"'/></div>";
+                                lista += "<div class='resultado'> Year:"+myObject[i].ReleaseYear+"</div>"; 
+                                lista += "<div>Synopsis: "+myObject[i].Synopsis+"</div>";
+                                ++i;
+                            } //se puede poner un floated div al medio?              
+                            lista += "</div>";
+                            $("#standout").html(lista);
+                            $("#the_lights").fadeTo(1,0);
+                            document.getElementById("the_lights").style.display="block";
+                            $("#the_lights").fadeTo("slow",0.6);			
+                    }
+            });
     });
     
     var result = $("#result");
