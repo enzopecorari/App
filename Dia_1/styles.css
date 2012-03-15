@@ -6,9 +6,9 @@
         Purpose of the stylesheet follows.
 */
 
-root { 
-    display: block;
-}
+/* Styles for transparent background */
+#the_lights {background-color:#000;height:850%;width:100%;position:absolute;top:0;left:0;display:none;}
+#standout {padding:5px;background-color:white;position:relative;z-index:1000;}
 
 div {
      padding-bottom: 6px;
@@ -16,7 +16,7 @@ div {
 }
 
 .resultado {
-    padding-top: 24px;
+    padding-top: 6px;
     color: green;
     padding-bottom: 6px;
 }
@@ -29,6 +29,11 @@ div {
 
 body {
     text-align:center;
-    
 }
 
+.titulo {
+    color: red;
+    padding-top: 24px;
+    font-style: italic;
+    font-size: 24px;
+}

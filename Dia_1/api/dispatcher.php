@@ -8,3 +8,6 @@ require 'classes/Dispatcher.class.php';
 require 'classes/ErrorHandler.class.php';
 $dispatcher = new Dispatcher($_REQUEST);
 echo $dispatcher->dispatch();
+
+
+
