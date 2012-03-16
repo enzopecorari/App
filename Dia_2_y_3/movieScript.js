@@ -1,8 +1,7 @@
-    var param = null;        
-    $.ajax({
+  $.ajax({
                     url: 'api/dispatcher.php',
                     type: "POST",
-                    crossDomain: true,
+                    crossDomain: true, 
                     data: { service: 'movie.getTop',params: {'name': 'null'}},
                     dataType: 'json',
                     success: function(resu){
