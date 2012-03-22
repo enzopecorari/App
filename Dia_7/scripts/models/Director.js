@@ -18,7 +18,7 @@ define(["models/model"], function(Model) {
         Director.prototype.speak = function(){
         var q = this.getQuotes();
         $('#quote').html(this.getName()+" says: "+q[Math.round(Math.random()*q.length)]);
-        $.mobile.changePage('#dialog', {transition: 'pop', role: 'dialog'});   		
+  		
 
         }; 
         return (Director);

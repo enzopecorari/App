@@ -11,8 +11,9 @@ define(["./model","./director"], function(Model,Director) {
             this.rating = _rating;
             this.id = _id;
             this.cast = [];
-            return( this );
             this.director = new Director();
+            return( this );
+
         }
         Movie.prototype = Object.create( Model.prototype );
         Movie.prototype.getTitle = function(){return this.title};

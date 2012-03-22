@@ -8,16 +8,10 @@
     <head>
         <meta charset="utf-8">
         <title><?php echo "$title: $subtitle"; ?></title>
-        <link href="css/default.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
         
-        <!-- jQuery -->
-        <!-- include jquery toolkit here -->
-        <script src="scripts/jQuery.js"></script>
-	<script src="scripts/jquerymobile.js"></script>
-        
-        
+             
         <!-- default javascript content -->
         <!-- include your default js file here -->
         <script data-main="scripts/main" src="scripts/require.js"></script>
@@ -28,7 +22,7 @@
             <h1><?php echo "<span class='title'>$title</span>: <span class='subtitle'>$subtitle</span>"; ?></h1>
         </header>   
       
-           
+         <a href="#dialog" class="speak" data-rel="dialog" data-role="button" data-theme="a">Speak</a> 
         <!-- add your content here -->
         <h3>-- Enjoy! --</h3>
         
