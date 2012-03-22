@@ -1,0 +1,30 @@
+ var json ={   "profiles":[   {
+                             "name"     : "Enzo Pecorari",
+                             "age"     : "24",
+                             "company" : "Toshiba",
+                             "actualposition" : "CEO",
+                             "lastposition" : "Fireman",
+                             "city"      : "Bahia Blanca",
+                             "university"    : "Universidad Nacional del Sur",                             
+                             "carrer"    : "Computer systems engineering",
+                             "phone" : "280-357140",
+                             "address" : "fake street 123",
+                             "civilstate" : "married"             
+
+                      },
+                      {
+                             "name"     : "Rogelio Funes Mori",
+                             "age"     : "24",
+                             "company" : "Toshiba",
+                             "actualposition" : "CEO",
+                             "lastposition" : "Fireman",
+                             "city"      : "Bahia Blanca",
+                             "university"    : "Universidad Nacional del Norte",                             
+                             "carrer"    : "Computer systems engineering",
+                             "phone" : "280-355440",
+                             "address" : "fake street 123",
+                             "civilstate" : "single"             
+
+                      }
+               ]
+ }
