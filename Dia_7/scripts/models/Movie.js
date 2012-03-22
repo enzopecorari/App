@@ -4,6 +4,7 @@
  */
 
 define(["./model","./director"], function(Model,Director) {
+    
         function Movie( _title, _rating, _id ){
             Model.call( this );
             this.title = _title;
