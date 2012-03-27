@@ -1,0 +1,124 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px "Arial", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #064D70;
+	color: #333333;
+	width: 520px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+#movieapp {
+	background: #eeeeee;
+	padding: 20px;
+	border-radius: 0 0 5px 5px;
+}
+
+#movieapp h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+#movieapp input[type="text"] {
+	width: 466px;
+	font-size: 24px;
+	padding: 6px;
+	border: 1px solid #999999;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+
+#movieapp input::-webkit-input-placeholder {
+	font-style: italic;
+}
+
+#main {
+	display: none;
+}
+
+#movie-list {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#movie-list li {
+	padding: 18px 20px 18px 0;
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #cccccc;
+}
+
+#movie-list li:last-child {
+	border-bottom: none;
+}
+
+#movie-list .destroy {
+	position: absolute;
+	right:5px;
+	top: 20px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: url(destroy.png) no-repeat;
+}
+
+#movie-list li:hover .destroy {
+  	display: block;
+}
+
+#movie-list .destroy:hover {
+  	background-position: 0 -20px;
+}
+
+#movie-list li.editing {
+	border-bottom: none;
+	margin-top: -1px;
+	padding: 0;
+}
+
+#movie-list li.editing:last-child {
+	margin-bottom: -1px;
+}
+
+#movie-list li.editing .edit {
+	display: block;
+	width: 444px;
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+}
+#movie-list li.editing .editY {
+	display: block;
+	width: 444px;
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+}
+#movie-list li.editing .editS {
+	display: block;
+	width: 444px;
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+}
+
+
+#movie-list li.editing .view {
+	display: none;
+}
+
+#movie-list li .edit {
+	display: none;
+}
+#movie-list li .editY {
+	display: none;
+}
+#movie-list li .editS {
+	display: none;
+}
