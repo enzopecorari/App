@@ -1,0 +1,85 @@
+/* 
+    Document   : default
+    Created on : DATE
+    Author     : YOU <your@email>
+    Description:
+        CSS3 playground
+*/
+body {
+	background: #E4E4E4;
+	color: #292929;
+	color: rgba(0, 0, 0, 0.82);
+	font: normal 100% Cambria, Georgia, serif;
+	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	-webkit-text-size-adjust: none;
+}
+
+.topHeader {
+	right:5px;
+	top: 20px;
+        text-align: center;
+}
+#menu {
+        
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+#menu li {
+    
+        text-align: center;
+        width: 30%;
+	padding: 18px 20px 18px 0;
+	position: relative;
+	font-size: 24px;
+	border-top: 2px solid #cccccc;
+        border-left: 2px solid #cccccc;
+        border-right: 2px solid #cccccc;
+}
+
+#menu a:hover {
+    
+        color: rgba(10, 90, 90, 0.82);
+	padding: 18px 20px 18px 0;
+}
+
+#menu li:last-child {
+	border-bottom: 2px solid #cccccc;
+}
+.hiOne { background:#ff0; }
+.hiTwo { background:#0f0; }
+.hiThree { background:#0ff; }
+
+span[class^="hi"]{ background:#00f; }
+span[class$="One"]{ background:#f00; }
+article header a:nth-of-type(1){color:black;}
+article header a:nth-of-type(2) {color:red;}
+p:empty { display:none; }
+
+article{
+    padding: 2% 2% 2% 2%;
+    -moz-box-shadow: 3px 3px 4px #444;
+    -webkit-box-shadow: 3px 3px 4px #444;
+    box-shadow: 3px 3px 4px #444;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444');
+}    
+
+aside{
+    clear:left;
+    -moz-transform:rotate(2deg);
+    -webkit-transform:rotate(2deg);
+    -o-transform:rotate(2deg);
+    -ms-transform:rotate(2deg);
+}
+span[class]{  background:#E4E4E4; }
+
+@media (min-width: 800px) {
+    article{
+        width:45%; float:left; display:block;        
+    } 
+}
