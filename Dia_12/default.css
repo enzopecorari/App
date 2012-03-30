@@ -1,0 +1,64 @@
+/* 
+    Document   : default
+    Created on : 29-mar-2012, 11:42:30
+    Author     : Enzo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#code{
+        -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);;
+	margin: 2%;
+	width: 90%; 
+        height: 50%;
+}
+.vbox {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+}
+.boxcenter {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+}
+.center {
+  text-align: center;
+}
+#dropzone {
+height: 150px;
+width: 100%;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: 2px dashed #0687FF;
+}
+.gmap a {
+  line-height: 100%;
+  border-bottom: none;
+}
+#geo-map {
+              height: 280px;
+              width: 640px;
+            }
+#geo-log {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+}

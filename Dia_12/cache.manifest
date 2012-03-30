@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+default.css
+scripts/dnd-lib.js
+scripts/worker.js
+index.html
+
+NETWORK:
+*
