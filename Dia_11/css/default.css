@@ -61,6 +61,7 @@ article header a:nth-of-type(2) {color:red;}
 p:empty { display:none; }
 
 article{
+    width:400px; float:left; display:block;    
     padding: 2% 2% 2% 2%;
     -moz-box-shadow: 3px 3px 4px #444;
     -webkit-box-shadow: 3px 3px 4px #444;
@@ -78,8 +79,3 @@ aside{
 }
 span[class]{  background:#E4E4E4; }
 
-@media (min-width: 800px) {
-    article{
-        width:45%; float:left; display:block;        
-    } 
-}
