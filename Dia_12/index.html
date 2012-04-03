@@ -14,10 +14,18 @@ and open the template in the editor.
     <body>
         <textarea rows="30" id="code" placeholder="Type your code here..."></textarea> 
         <div>
-            <button id="js-button" onclick="eval(document.getElementById('code').textContent);" title="Run the javascript code.">
+            <button id="js-button" title="Run the javascript code.">
                 <span>Run</span>
             </button>
             
+            
+            <script>
+                //script for execute code
+              $("#js-button").click(function () {
+                var code = code.val();
+                eval(code);
+             });
+            </script>
             
             <button id="save-ta">Save</button>
             <script>
@@ -125,28 +133,29 @@ and open the template in the editor.
             };
             ws.onmessage = function (evt) { var received_msg = evt.data; 
                 console.log("received: "+received_msg);
-        };
+            };
 
             </script>
           
             <script>
-          cache = window.applicationCache;
-var cacheUpdatereadyListener = function() {
-  // Swap cache with updated data
-  cache.swapCache();
-}
-cache.addEventListener('updateready', cacheUpdatereadyListener, false);
-if(cache.status == cache.UPDATEREADY) {
-  // Update cached data and call updateready listener after
-  cache.update();
-  window.addEventListener('offline', function() {
-  if(navigator.onLine == false) {
-    alert('We went offline');
-  } else {
-    alert('We are online again!');
-  }
-}, true);
-}</script>
+            cache = window.applicationCache;
+            var cacheUpdatereadyListener = function() {
+            // Swap cache with updated data
+            cache.swapCache();
+            }
+            cache.addEventListener('updateready', cacheUpdatereadyListener, false);
+            if(cache.status == cache.UPDATEREADY) {
+            // Update cached data and call updateready listener after
+            cache.update();
+            window.addEventListener('offline', function() {
+                if(navigator.onLine == false) {
+                    alert('We went offline');
+                } else {
+                    alert('We are online again!');
+                    }
+                }, true);
+            }
+            </script>
 
 
     </body>
