@@ -8,5 +8,5 @@ setInterval("showmesagge()", 60000);
 
 
 function showmesagge(){ 
-    alert('minute');
+    self.postMessage("working");
 } 
