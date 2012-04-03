@@ -1,0 +1,147 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="scripts/modernizr.custom.98250.js"></script>
+	<script src="scripts/yepnope.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="default.css" rel="stylesheet" />        
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <textarea rows="30" id="code" placeholder="Type your code here..."></textarea> 
+        <div>
+            <button id="js-button" title="Run the javascript code.">
+                <span>Run</span>
+            </button>
+            
+            
+            <script>
+                //script for execute code
+                var area = document.getElementById('code');
+              $("#js-button").click(function () {
+                var code = area.value;
+                eval(code);
+             });
+            </script>
+            
+            <button id="save-ta">Save</button>
+            <script>
+                //script for local storage
+              (function(){
+                var area = document.getElementById('code');
+                if (!area.value) {
+                  area.value = window.localStorage.getItem('value');
+                }
+                  document.querySelector('#save-ta').addEventListener('click', function () {
+                  window.localStorage.setItem('value', area.value);
+                  window.localStorage.setItem('timestamp', (new Date()).getTime());
+                }, false);
+              })();  
+            </script>
+        </div>
+        
+        
+        <div>
+              <div id="dropzone" class="vbox boxcenter center">
+                Drop in images
+              </div>
+        </div>
+        <div id="dnd-thumbnails" class="center"></div>
+        <script src="scripts/dnd-lib.js" defer></script>
+        <script>
+            //script for drop in
+            window.addEventListener('load', function(e) {
+            var dndc = new DNDFileController('dropzone', 'dnd-thumbnails');
+            }, false);
+        </script>
+        
+        
+        <button id="see-position">Show Position</button> <span id="geo-log"></span>
+          <div id="geo-map" class="gmap example">
+            <img src="http://maps.google.com/maps/api/staticmap?center=-30.4419,-50.1419&zoom=3&size=680x278&sensor=true"/>
+          </div>
+
+          <script>
+              // script for geolocator
+          (function() {
+            var map = null;
+            var geolog = document.querySelector('#geo-log');
+            var geoMap = document.querySelector('#geo-map');
+
+            function showPosition(position) {
+              geolog.textContent = "You're within " + position.coords.accuracy +
+                  " meters of (" + position.coords.latitude + ", " +
+                  position.coords.longitude + ")";
+              var latLng = new google.maps.LatLng(
+                  position.coords.latitude, position.coords.longitude);
+              var marker = new google.maps.Marker({
+                position: latLng,
+                map: map
+              });
+              map.setCenter(latLng);
+              map.setZoom(15);
+            }
+
+            function handlePositionError(evt) {
+              geolog.textContent = evt.message;
+            }
+
+            function successPositionHandler(evt) {
+              // Load map if it doesn't already exist and when user clicks the button.
+              if (!map) {
+                map = new google.maps.Map(geoMap, {
+                  zoom: 3,
+                  center: new google.maps.LatLng(37.4419, -94.1419), // United States
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+                map.getDiv().style.border =  '1px solid #ccc';
+              }
+
+              if (navigator.geolocation) {
+                geolog.style.visibility = 'visible';
+                geolog.textContent = 'Looking for location...';
+                navigator.geolocation.getCurrentPosition(showPosition, handlePositionError);
+                // Also monitor position as it changes.
+                //navigator.geolocation.watchPosition(showPosition, handlePositionError);
+              } else {
+                geolog.textContent = 'Oops! Your browser does not support geolocation.';
+              }
+            }
+
+            document.querySelector('#see-position').addEventListener('click', successPositionHandler, false);
+            geoMap.addEventListener('click', successPositionHandler, false);
+          })();
+          </script>
+          
+           <script>
+               //for worker
+            var worker = new Worker("scripts/worker.js");            
+            </script>
+            
+            
+             <script>
+                //for sockets
+
+            var ws = new WebSocket("ws://echo.websocket.org");
+            ws.onopen = function() {
+                // Web Socket is connected. You can send data by send() method..
+                console.log("sending echooooooooo");
+                ws.send("echooooooooo");
+            };
+            ws.onmessage = function (evt) { var received_msg = evt.data; 
+                console.log("received: "+received_msg);
+            };
+
+            </script>
+
+
+    </body>
+</html>
